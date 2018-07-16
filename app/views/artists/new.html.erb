@@ -1,0 +1,8 @@
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- <%= form_tag ('/search') %> # not talking to a model -->

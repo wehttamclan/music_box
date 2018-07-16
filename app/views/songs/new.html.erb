@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create A New Song</title>
+  </head>
+  <body>
+    <h1 class="new-song-title">Create A New Song</h1>
+    <%= form_for [@artist, @song], html: {class: "job-form"} do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :length %>
+    <%= f.text_field :length %><br>
+
+    <%= f.label :play_count %>
+    <%= f.text_field :play_count %><br>
+
+    <%= f.submit "Create Song", :class => "new-song-button"%>
+    <% end %>
+  </body>
+</html>
