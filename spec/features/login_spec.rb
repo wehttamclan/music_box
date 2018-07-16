@@ -30,7 +30,7 @@ describe 'login workflow' do
     expect(page).to have_content("Log Out")
     expect(page).to_not have_content("I already have an account")
   end
-  it 'allows registered users to log in succsessfully' do
+  it 'allows registered users to log out succsessfully' do
     user = User.create(username: "KeeganTwoWords", password: "test")
 
     visit root_path
@@ -42,7 +42,7 @@ describe 'login workflow' do
 
     click_on "Log In"
     click_on "Log Out"
-    expect(current_user).to eq(root_path)
-    expect(page).to_not have_button("I already have an account")
+    expect(current_path).to eq(root_path)
+    expect(page).to have_button("I already have an account")
   end
 end
